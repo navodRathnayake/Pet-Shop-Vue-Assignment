@@ -8,7 +8,7 @@ const mobileMenuOpen = ref(false)
 </script>
 
 <template>
-    <div class="bg-white h-[70vh]">
+    <div class="bg-white h-[100vh]">
 
       <AppBar />
       <HeroComponent />

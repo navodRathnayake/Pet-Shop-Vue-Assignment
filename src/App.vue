@@ -1,11 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HomeComponent from './components/HomeComponent.vue'
+import AboutUs from './components/AboutUSComponent.vue'
 </script>
 
 <template>
   <HomeComponent />
-  <RouterView />
+  <!-- <RouterView /> -->
+  <AboutUs />
 </template>
 
 <style scoped>
