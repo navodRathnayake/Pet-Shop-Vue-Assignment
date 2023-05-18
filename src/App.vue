@@ -2,12 +2,16 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HomeComponent from './components/HomeComponent.vue'
 import AboutUs from './components/AboutUSComponent.vue'
+import RescueBanner from './components/RescueBannerComponent.vue'
+import ContactUs from './components/ContactUsComponent.vue'
 </script>
 
 <template>
   <HomeComponent />
   <!-- <RouterView /> -->
   <AboutUs />
+  <RescueBanner />
+  <ContactUs />
 </template>
 
 <style scoped>
