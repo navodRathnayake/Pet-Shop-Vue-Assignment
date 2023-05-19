@@ -35,27 +35,25 @@
                      
                     <a aria-label="add to chat" href="#" class=" bg-red-500 p-4 border bg-red border-red-200 dark:bg-gray-800  dark:border-red-700 rounded-full duration-300 hover:border-red-400 hover:shadow-lg hover:shadow-red-600/20 dark:hover:border-red fill-red-600">
                         <div class="flex justify-center space-x-4 ">
-                            <span class="hidden font-medium md:block text-white">Subscribe Now</span>
+                            <span class=" font-medium text-white">Subscribe Now</span>
                         </div>
                     </a>   
                      
                 </div>
 
                 <div class="dark:text-gray-300">
-                    <p>this is a sample text here</p>
                 </div>
-
-                <div class="pt-12 flex gap-6 lg:gap-12 justify-between grayscale lg:w-2/3 sm: 2/3 xl:2/3 md: 2/3">
-                    <img src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/airbnb.svg" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
-                    <img src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/ge.svg" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
-                    <img src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/coty.svg" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
-                    <img src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/microsoft.svg" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
+                <div class="pt-12 flex gap-6 lg:gap-12 justify-between grayscale lg:w-2/3 sm: 2/3 xl:2/3 md: 2/3 ">
+                    <img src="https://th.bing.com/th/id/R.4a56d115773bf4e7a08e7c28d461fe02?rik=R5DkR1sBiGtqiQ&pid=ImgRaw&r=0" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
+                    <img src="https://imageserver.petsbest.com/website/PetsBestLogo.png" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
+                    <img src="https://th.bing.com/th/id/OIP.ZHuR1w_C-DP3TRcHTP21WwHaDt?pid=ImgDet&rs=1" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
+                    <img src="https://drfossums.com/wp-content/uploads/2020/03/cropped-pets-logo.png" class="h-8 sm:h-10 w-auto lg:h-12" alt="" />
                 </div>
             </div>
-            <div class="mt-12 md:mt-0 lg:absolute -right-0 lg:w-7/12 bg-gray-900">
+            <div class="mt-12 md:mt-0 lg:absolute -right-0 lg:w-5/12 hidden md:block sm:block">
                 <div class="relative w-full">
                     <div aria-hidden="true" class="absolute scale-75 md:scale-110 inset-0 m-auto w-full h-full md:w-96 md:h-96 rounded-full rotate-45 bg-gradient-to-r from-sky-500 to-cyan-300 blur-3xl"></div>
-                    <img src="https://tailus.io/sources/blocks/tech-startup/preview/images/globalization-cuate.svg" class="relative w-full" alt="wath illustration" loading="lazy" width="320" height="280">
+                    <img src="https://th.bing.com/th/id/R.15ff2d9cdb2449feb06327dd24c2cd2a?rik=mrTt1v66ozZVFQ&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fdogs-transparent-background%2fdogs-transparent-background-13.png&ehk=QAG27185PTsl601azFzkbBxe5Z7FG21nzaOFUcRHzEM%3d&risl=&pid=ImgRaw&r=0" class="relative w-full" alt="wath illustration" loading="lazy" width="320" height="280">
                 </div>
             </div>
         </div>
