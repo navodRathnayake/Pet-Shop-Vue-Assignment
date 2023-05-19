@@ -31,33 +31,18 @@
                 <p class="sm:text-lg text-gray-700 dark:text-gray-300 lg:w-11/12">
                     DailyBot takes chat and collaboration to the next level: daily standups, team check-ins, surveys, kudos, best companion bot for your virtual watercooler, 1:1 intros, motivation tracking and more.
                 </p>
-                <span class="block font-semibold text-gray-500 dark:text-gray-400">The best companion bot for your chat app.</span>
                 <div class="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
-                    <a aria-label="add to slack" href="#" class="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30">
-                        <div class="flex justify-center space-x-4">
-                            <img class="w-6 h-6" src="https://tailus.io/sources/blocks/tech-startup/preview/images/slack.png" alt="slack logo" loading="lazy" width="128" height="128">
-                            <span class="hidden font-medium md:block dark:text-white">Slack</span>
-                        </div>
-                    </a>    
-                    <a aria-label="add to chat" href="#" class="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-green-400 hover:shadow-lg hover:shadow-lime-600/20 dark:hover:border-green-300/30">
-                        <div class="flex justify-center space-x-4">
-                            <img class="w-6 h-6" src="https://tailus.io/sources/blocks/tech-startup/preview/images/chat.png" alt="chat logo" loading="lazy" width="128" height="128">
-                            <span class="hidden font-medium md:block dark:text-white">Google Chat</span>
+                     
+                    <a aria-label="add to chat" href="#" class=" bg-red-500 p-4 border bg-red border-red-200 dark:bg-gray-800  dark:border-red-700 rounded-full duration-300 hover:border-red-400 hover:shadow-lg hover:shadow-red-600/20 dark:hover:border-red fill-red-600">
+                        <div class="flex justify-center space-x-4 ">
+                            <span class="hidden font-medium md:block text-white">Subscribe Now</span>
                         </div>
                     </a>   
-                    <a aria-label="add to zoom" href="#" class="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/20 dark:hover:border-blue-300/30">
-                        <div class="flex justify-center space-x-4">
-                            <img class="w-6 h-6" src="https://tailus.io/sources/blocks/tech-startup/preview/images/zoom.png" alt="chat logo" loading="lazy" width="128" height="128">
-                            <span class="hidden font-medium md:block dark:text-white">Zoom</span>
-                        </div>
-                    </a>    
+                     
                 </div>
 
                 <div class="dark:text-gray-300">
-                    🔥🌟 
-                    <span>Other integrations :</span> 
-                    <a href="#" class="font-semibold text-gray-700 dark:text-gray-200">Discord,</a>
-                    <a href="#" class="font-semibold text-gray-700 dark:text-gray-200">Telegram</a>
+                    <p>this is a sample text here</p>
                 </div>
 
                 <div class="pt-12 flex gap-6 lg:gap-12 justify-between grayscale lg:w-2/3 sm: 2/3 xl:2/3 md: 2/3">
