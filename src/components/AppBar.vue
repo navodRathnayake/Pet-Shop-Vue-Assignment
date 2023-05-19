@@ -1,3 +1,20 @@
+<script setup>
+  import { ref } from 'vue'
+  import { Dialog, DialogPanel } from '@headlessui/vue'
+  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+  import AppBarTail from './AppBarTailComponent.vue'
+  
+  const navigation = [
+    { name: 'Home', href: '#' },
+    { name: 'About Us', href: '#' },
+    { name: 'Marketplace', href: '#' },
+    { name: 'Dog Rescue', href: '#' },
+    { name: 'Contact Us', href: '#' },
+  ]
+  
+  const mobileMenuOpen = ref(false)
+</script>
+
 <template>
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -16,9 +33,9 @@
           <div class="hidden lg:flex lg:gap-x-12">
             <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
           </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-          </div>
+          
+          <AppBarTail />
+
         </nav>
         <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
           <div class="fixed inset-0 z-50" />
@@ -47,19 +64,4 @@
         </Dialog>
       </header>
 </template>
-  
-<script setup>
-  import { ref } from 'vue'
-  import { Dialog, DialogPanel } from '@headlessui/vue'
-  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-  
-  const navigation = [
-    { name: 'Home', href: '#' },
-    { name: 'About Us', href: '#' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Dog Rescue', href: '#' },
-    { name: 'Contact Us', href: '#' },
-  ]
-  
-  const mobileMenuOpen = ref(false)
-</script>
+
