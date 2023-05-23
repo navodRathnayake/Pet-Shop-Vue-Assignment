@@ -5,13 +5,12 @@ import AboutUs from './components/AboutUSComponent.vue'
 import RescueBanner from './components/RescueBannerComponent.vue'
 import ContactUs from './components/ContactUsComponent.vue'
 import AppFooter from './components/AppFooterComponent.vue'
+import AppBar from './components/AppBar.vue'
 </script>
 
 <template>
-  <HomeComponent />
-  <AboutUs />
-  <RescueBanner />
-  <ContactUs />
+  <!-- <AppBar/> -->
+  <RouterView />
   <AppFooter />
 </template>
 

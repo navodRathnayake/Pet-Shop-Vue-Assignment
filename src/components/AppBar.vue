@@ -3,11 +3,12 @@
   import { Dialog, DialogPanel } from '@headlessui/vue'
   import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
   import AppBarTail from './AppBarTailComponent.vue'
+import { RouterLink } from 'vue-router';
   
   const navigation = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'About Us', href: '#' },
-    { name: 'Marketplace', href: '#' },
+    { name: 'Marketplace', href: '/marketplace' },
     { name: 'Dog Rescue', href: '#' },
     { name: 'Contact Us', href: '#' },
   ]
@@ -31,7 +32,8 @@
             </button>
           </div>
           <div class="hidden lg:flex lg:gap-x-12">
-            <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+            <!-- <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a> -->
+            <RouterLink v-for="item in navigation" :key="item.name" :to="item.href" class="text-sm font-semibold leading-6 text-gray-900" >{{ item.name }}</RouterLink>
           </div>
           
           <AppBarTail />
