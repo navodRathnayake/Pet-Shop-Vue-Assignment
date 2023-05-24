@@ -22,7 +22,7 @@
                                 </label>
                                 <input
                                     class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                    id="firstName"
+                                    v-model="firstName"
                                     type="text"
                                     placeholder="First Name"
                                 />
@@ -33,7 +33,7 @@
                                 </label>
                                 <input
                                     class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                    id="lastName"
+                                    v-model="lastName"
                                     type="text"
                                     placeholder="Last Name"
                                 />
@@ -69,7 +69,7 @@
                                 </label>
                                 <input
                                     class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                    id="c_password"
+                                    v-model="c_password"
                                     type="password"
                                     placeholder="******************"
                                 />
@@ -95,7 +95,7 @@
                         <div class="text-center">
                             <a
                                 class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                                href="./index.html"
+                                href= "/login"
                             >
                                 Already have an account? Login!
                             </a>
@@ -125,18 +125,34 @@
   
   const email = ref('')
   const password = ref('')
+  const firstName = ref('')
+  const lastName = ref('')
+  const c_password = ref('')
   
   const router = useRouter() // get a reference to our vue router
   const register = () => {
-    createUserWithEmailAndPassword(getAuth(),email.value, password.value) // need .value because ref()
+    if(firstName.value == '' || lastName.value == '' || email.value == '' || password.value != c_password.value ){     
+        alert('Please Submit The Registration Form Correctly');
+    }
+    else{
+        createUserWithEmailAndPassword(getAuth(),email.value, password.value) // need .value because ref()
     .then((data) => {
       console.log('Successfully registered!');
-      router.push('/feed') // redirect to the feed
+      console.log(firstName);
+      router.push('/')
+      alert('You Have Successfuly Log In');
     })
     .catch(error => {
       console.log(error.code)
       alert(error.message);
     });
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    form.reset();
+});
+
+    }
   }
   
   </script>
