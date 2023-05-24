@@ -23,6 +23,7 @@
         <div class="flex -space-x-1 overflow-hidden lg:ml-3">
           <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
         </div>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 ml-3">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="/login" class="text-sm font-semibold leading-6 text-gray-900 ml-3">Log in <span aria-hidden="true">&rarr;</span></a>
+        <!-- <RouterLink>Log in </RouterLink> -->
       </div>
 </template>
