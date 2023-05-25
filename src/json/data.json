@@ -1,0 +1,71 @@
+{
+    "product" : [
+        {
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        },
+        {
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        },
+        {
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        },
+        {
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        },
+        {
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        },{
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        },
+        {
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        },
+        {
+            "img"  : "url here",
+            "title": "here is the title",
+            "price": "$324",
+            "pet"  : "daog"
+        }
+    ],
+    "cart" : {
+        "item" : [
+            {
+                "title" : "this is the title",
+                "price" : "$232",
+                "quantity" : "4"
+            },
+            {
+                "title" : "this is the title",
+                "price" : "$232",
+                "quantity" : "4"
+            },
+            {
+                "title" : "this is the title",
+                "price" : "$232",
+                "quantity" : "4"
+            }
+        ],
+        "total" : "$3543.00"
+    }
+}
