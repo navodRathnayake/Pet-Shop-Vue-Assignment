@@ -3,23 +3,23 @@
 </script>
 
 <template>
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <ThemeModeSwitch />
         
         
         <div v-if="!authenticated">
-          <font-awesome-icon :icon="['far', 'circle-user']" size = "lg" />
+          <font-awesome-icon :icon="['far', 'circle-user']" size = "lg"/>
         </div>
 
         <div v-if="authenticated" class="flex">
           <!-- cart -->
-          <div class="ml-4 flow-root lg:ml-3">
-            <a href="#" class="group -m-2 flex items-center p-2">
+          <div class="ml-4 cursor-pointer flow-root lg:ml-3">
+            <div @click="slideOver" class="group -m-2 flex items-center p-2">
               <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
               </svg>
-              <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-            </a>
+              <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">3</span>
+            </div>
           </div>
           <!-- cart -->
           <div class="flex -space-x-1 overflow-hidden lg:ml-3">
@@ -34,12 +34,26 @@
         </div>
         <!-- <RouterLink>Log in </RouterLink> -->
       </div>
+      <div id="slide-over-container" class="fixed inset-0 w-full h-[100vh] invisible">
+        <div @click="slideOver" id="slide-over-bg" class="absolute duration-500 ease-out transition-all inset-0 w-full h-[100vh] bg-gray-900 opacity-10"></div>
+        <div id="slide-over" class="absolute duration-500 ease-out transition-all w-96 h-[100vh] bg-white right-0 top-0 translate-x-full">
+          <div @click="slideOver" class="w-10 h-10 cursor-pointer flex items-center justify-center absolute top-0 right-0 mt-5 mr-5">
+            <font-awesome-icon :icon="['fas', 'xmark']" />
+          </div>
+          <div class="mt-20">
+            <CartSliderView />
+          </div>
+        </div>
+      </div>
+      
+
 </template>
 
 <script>
 /* eslint-disable no-unused-vars */
 import { getAuth, onAuthStateChanged,signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useRouter } from "vue-router";
+import CartSliderView from '../components/CartView.vue'
 
 export default {
   name: "LoginBox", 
@@ -79,6 +93,12 @@ export default {
           this.password = "";
           this.router.push("/");
         });
+    },
+    slideOver(){
+      document.getElementById('slide-over-container').classList.toggle('invisible');
+      document.getElementById('slide-over-bg').classList.toggle('opacity-0');
+      document.getElementById('slide-over-bg').classList.toggle('opacity-50');
+      document.getElementById('slide-over').classList.toggle('translate-x-full')
     }
   }
 };
