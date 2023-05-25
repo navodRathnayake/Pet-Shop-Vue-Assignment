@@ -13,10 +13,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faLightbulb, faUser, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret, faUser, faLightbulb)
+library.add(faUserSecret, faUser, faLightbulb, faCircleUser)
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { faCircleUser } from '@fortawesome/free-regular-svg-icons'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
