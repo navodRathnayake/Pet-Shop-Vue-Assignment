@@ -1,6 +1,6 @@
 <script setup>
     import Cart from '../components/Cart.vue'
-    import Json from '../json/data.json'
+    import Json from '../json/marketplace.json'
 </script>
 
 <script>

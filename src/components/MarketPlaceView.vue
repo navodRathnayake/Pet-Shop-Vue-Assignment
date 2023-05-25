@@ -3,12 +3,14 @@
     import ProductCard from '../components/ProductCardView.vue'
     import CartView from '../components/CartView.vue'
     import Pagination from '../components/PaginationView.vue'
+    import Json from '../json/marketplace.json'
 </script>
 
 <script>
 export default {
   data() {
     return {
+      JsonData : Json
     };
   },
   name: '',
@@ -71,7 +73,9 @@ export default {
           <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4 ">
             <!-- Filters -->
             <form class="hidden lg:block ">
-              <CartView />
+           
+                <CartView />
+              
             </form>
             <!-- Product grid -->
             <div class="lg:col-span-3">
