@@ -5,6 +5,32 @@
     import Pagination from '../components/PaginationView.vue'
 </script>
 
+<script>
+export default {
+  data() {
+    return {
+    };
+  },
+  name: '',
+  components : {
+    SearchBar,
+    ProductCard,
+    CartView,
+    Pagination
+  }
+};
+</script>
+
+<!-- <script>
+export default {
+  data() {
+    return {
+      message: JsonData,
+    };
+  },
+};
+</script> -->
+
 <template>
     
 <div class="bg-white">
