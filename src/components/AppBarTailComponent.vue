@@ -22,7 +22,7 @@
             </div>
           </div>
           <!-- cart -->
-          <div class="flex -space-x-1 overflow-hidden lg:ml-3">
+          <div @click="profileOver" class="flex cursor-pointer -space-x-1 overflow-hidden lg:ml-3">
             <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
           </div>
         </div>
@@ -34,6 +34,7 @@
         </div>
         <!-- <RouterLink>Log in </RouterLink> -->
       </div>
+      <!-- cart slide over -->
       <div id="slide-over-container" class="fixed inset-0 w-full h-[100vh] invisible">
         <div @click="slideOver" id="slide-over-bg" class="absolute duration-500 ease-out transition-all inset-0 w-full h-[100vh] bg-gray-900 opacity-10"></div>
         <div id="slide-over" class="absolute duration-500 ease-out transition-all w-96 h-[100vh] bg-white right-0 top-0 translate-x-full">
@@ -45,8 +46,20 @@
           </div>
         </div>
       </div>
-      
-
+      <!-- cart slide over -->
+      <!-- profile slide over -->
+      <div id="profile-over-container" class="fixed inset-0 w-full h-[100vh] invisible">
+        <div @click="profileOver" id="profile-over-bg" class="absolute duration-500 ease-out transition-all inset-0 w-full h-[100vh] bg-gray-900 opacity-10"></div>
+        <div id="profile-over" class="absolute duration-500 ease-out transition-all w-96 h-[100vh] bg-white right-0 top-0 translate-x-full">
+          <div @click="profileOver" class="w-10 h-10 cursor-pointer flex items-center justify-center absolute top-0 right-0 mt-5 mr-5">
+            <font-awesome-icon :icon="['fas', 'xmark']" />
+          </div>
+          <div class="mt-20">
+            <ProfileView />
+          </div>
+        </div>
+      </div>
+      <!-- profile slide over -->
 </template>
 
 <script>
@@ -54,52 +67,59 @@
 import { getAuth, onAuthStateChanged,signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useRouter } from "vue-router";
 import CartSliderView from '../components/CartView.vue'
+import ProfileView from '../components/ProfileView.vue';
 
 export default {
-  name: "LoginBox", 
-
-  data() {
-    return {
-      loggedIn: false,
-      email: "",
-      password: "",
-       router: useRouter(),
-      errMsg: "",
-      auth:getAuth()
-    };
-  },
-  mounted() {
-
-    const ref = this;
-  onAuthStateChanged(this.auth, (user) =>{
-      if (user) {
-        ref.loggedIn = true;
-      } else {
-        ref.loggedIn = false;
-      }
-    });
-  },
-  computed: {
-    authenticated() {
-      return this.loggedIn;
-    }
-  },
-  methods: {
-    logout() {
-      alert('You Have Loged Out')
-  signOut(this.auth).then(() => {
-          this.loggedIn = false;
-          this.email = "";
-          this.password = "";
-          this.router.push("/");
+    name: "LoginBox",
+    data() {
+        return {
+            loggedIn: false,
+            email: "",
+            password: "",
+            router: useRouter(),
+            errMsg: "",
+            auth: getAuth()
+        };
+    },
+    mounted() {
+        const ref = this;
+        onAuthStateChanged(this.auth, (user) => {
+            if (user) {
+                ref.loggedIn = true;
+            }
+            else {
+                ref.loggedIn = false;
+            }
         });
     },
-    slideOver(){
-      document.getElementById('slide-over-container').classList.toggle('invisible');
-      document.getElementById('slide-over-bg').classList.toggle('opacity-0');
-      document.getElementById('slide-over-bg').classList.toggle('opacity-50');
-      document.getElementById('slide-over').classList.toggle('translate-x-full')
-    }
-  }
+    computed: {
+        authenticated() {
+            return this.loggedIn;
+        }
+    },
+    methods: {
+        logout() {
+            alert("You Have Loged Out");
+            signOut(this.auth).then(() => {
+                this.loggedIn = false;
+                this.email = "";
+                this.password = "";
+                this.router.push("/");
+            });
+        },
+        slideOver() {
+            document.getElementById("slide-over-container").classList.toggle("invisible");
+            document.getElementById("slide-over-bg").classList.toggle("opacity-0");
+            document.getElementById("slide-over-bg").classList.toggle("opacity-50");
+            document.getElementById("slide-over").classList.toggle("translate-x-full");
+        },
+        profileOver() {
+            document.getElementById("profile-over-container").classList.toggle("invisible");
+            document.getElementById("profile-over-bg").classList.toggle("opacity-0");
+            document.getElementById("profile-over-bg").classList.toggle("opacity-50");
+            document.getElementById("profile-over").classList.toggle("translate-x-full");
+        }
+    },
+    components: { ProfileView }
 };
 </script>
