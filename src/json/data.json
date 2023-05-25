@@ -1,51 +1,51 @@
 {
     "product" : [
         {
-            "img"  : "url here",
+            "img"  : "https://th.bing.com/th/id/R.d3f814dca6a7edab2386d1ef8abb0abc?rik=DndM3D3cjKnAdg&pid=ImgRaw&r=0",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "food"
         },
         {
-            "img"  : "url here",
+            "img"  : "https://petiq.com/wp-content/uploads/2020/06/PetProducts_Header_Mobile@2x.jpg",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "food"
         },
         {
-            "img"  : "url here",
+            "img"  : "https://th.bing.com/th/id/R.5192e0cb28fcd872e0b8b5404c759cdc?rik=6qkoFkF7DAji8w&riu=http%3a%2f%2f1.bp.blogspot.com%2f-jbQmO_PD72w%2fU4u8JsBlBZI%2fAAAAAAAAFuc%2fKKw403C3334%2fs1600%2f040.JPG&ehk=iffW5FR%2fGpxRJjqZMPnRqrLHBiMBhLiUNsNvAb%2br7no%3d&risl=&pid=ImgRaw&r=0",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "food"
         },
         {
-            "img"  : "url here",
+            "img"  : "https://th.bing.com/th/id/OIP.as075R0Oj2VtN8vu9YN9EwHaJQ?pid=ImgDet&rs=1",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "medicine"
         },
         {
-            "img"  : "url here",
+            "img"  : "https://allforpets.lk/wp-content/uploads/2021/04/BH312-Original-Adult-Fish-Potato-3kg-600x600.jpg",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "food"
         },{
-            "img"  : "url here",
+            "img"  : "https://th.bing.com/th/id/OIP.h1DIb6frwIsuMUFPtEvwFQHaHa?pid=ImgDet&w=740&h=740&rs=1",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "medicine"
         },
         {
-            "img"  : "url here",
+            "img"  : "https://th.bing.com/th/id/OIP.BWfO2qTRN4knMxTfGej5LwHaFY?pid=ImgDet&w=2977&h=2166&rs=1",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "food"
         },
         {
-            "img"  : "url here",
+            "img"  : "https://th.bing.com/th/id/OIP.P-5KaJvMCqCec3r6lqIiKQAAAA?pid=ImgDet&w=425&h=468&rs=1",
             "title": "here is the title",
             "price": "$324",
-            "pet"  : "daog"
+            "type"  : "medicine"
         }
     ],
     "cart" : {
