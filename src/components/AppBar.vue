@@ -5,13 +5,14 @@
   import AppBarTail from './AppBarTailComponent.vue'
   import { RouterLink } from 'vue-router'
   import TipsButton from './TipsButton.vue'
+
   
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '#' },
+    { name: 'About Us', href: '/about'},
     { name: 'Marketplace', href: '/marketplace' },
-    { name: 'Dog Rescue', href: '#' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Dog Rescue', href: '/rescue' },
+    { name: 'Contact Us', href: '/contact' },
   ]
   
   const mobileMenuOpen = ref(false)

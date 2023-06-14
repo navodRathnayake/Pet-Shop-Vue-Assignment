@@ -5,6 +5,9 @@ import Login from '../views/LoginView.vue'
 import PetHealth from '../views/PetHealthView.vue'
 import Register from '../views/RegisterView.vue'
 import Cart from '../views/CartViewPage.vue'
+import About from '../components/AboutUSComponent.vue'
+import Contact from '../components/ContactUSComponent.vue'
+import Rescue from '../views/RescueView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +41,21 @@ const router = createRouter({
       path: '/cart',
       name: 'cart',
       component: Cart
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
+    },
+    {
+      path: '/rescue',
+      name: 'rescue',
+      component: Rescue
     },
   ]
 })

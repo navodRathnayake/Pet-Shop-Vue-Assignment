@@ -9,9 +9,10 @@ import AppBar from './components/AppBar.vue'
 </script>
 
 <template>
-    <!-- <AppBar/> -->
-    <RouterView />
-    <AppFooter />
+    <div class="w-[100vw] h-[50vh]">
+      <RouterView />
+      <!-- <AppFooter /> -->
+    </div>
 </template>
 
 <style scoped>

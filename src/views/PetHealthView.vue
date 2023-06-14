@@ -1,9 +1,11 @@
 <script setup>
     import AppBar from '../components/AppBar.vue'
     import HealthTipCard from '../components/HealthTipCard.vue'
+    import AppFooter from '../components/AppFooterComponent.vue'
 </script>
 <template>
-    <AppBar />
+    <div class="h-[70vh]">
+      <AppBar />
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:text-center">
@@ -19,5 +21,7 @@
             </dl>
           </div>
         </div>
-      </div>      
+      </div>
+      <AppFooter />
+    </div>
 </template>
