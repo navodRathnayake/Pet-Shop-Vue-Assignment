@@ -40,7 +40,7 @@
         </div>
 
         <div v-if="!authenticated">
-          <a href="/login" class="text-sm font-semibold leading-6 text-gray-900 ml-3">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="/login" class="text-sm font-semibold leading-6 text-gray-900 ml-1">Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
 
         <div v-if="authenticated">

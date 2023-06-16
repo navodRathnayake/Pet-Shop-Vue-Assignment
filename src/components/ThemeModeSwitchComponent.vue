@@ -1,5 +1,5 @@
 <template>
-    <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in lg:mr-3">
+    <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in lg:mr-2">
         <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer " v-on:click="toggleDark()"/>
         <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-700 cursor-pointer"></label>
     </div>
