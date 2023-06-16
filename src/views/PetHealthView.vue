@@ -6,8 +6,8 @@
 </script>
 <template>
     <div>
-      <AppBar />
-    <div class="bg-white py-24 sm:py-32 h-[100vh]">
+      <!-- <AppBar /> -->
+    <div class="bg-white py-24 sm:py-32 h-[100vh] dark:bg-slate-200">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-5xl lg:text-center">
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Keep Your Pet Healthy</p>
@@ -34,8 +34,7 @@
           </div>
         </div>
       </div>
-      <HealthBlog />
-      <AppFooter />
+      <HealthBlog v-bind:title1 = myJson.articles[0].title v-bind:title2 = myJson.articles[1].title v-bind:body1= myJson.articles[0].description v-bind:body2= myJson.articles[1].description />
     </div>
 </template>
 

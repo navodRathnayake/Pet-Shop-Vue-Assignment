@@ -1,5 +1,5 @@
 <template>
-<div class="py-16 bg-gradient-to-br from-green-50 to-cyan-100">  
+<div class="py-16 bg-slate-300 dark:bg-slate-400">  
     <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
         <div class="mb-12 space-y-2 text-center">
           <span class="block w-max mx-auto px-3 py-1.5 border border-green-200 rounded-full bg-green-100 text-green-600">Blog</span>
@@ -13,8 +13,8 @@
             <div class="sm:w-7/12 pl-0 p-5">
               <div class="space-y-2">
                 <div class="space-y-4">
-                  <h4 class="text-2xl font-semibold text-cyan-900">Provident de illo eveniet commodi fuga fugiat laboriosam expedita.</h4>
-                  <p class="text-gray-600">Laborum saepe laudantium in, voluptates ex placeat quo harum aliquam totam, doloribus eum impedit atque! Temporibus...</p>
+                  <h4 class="text-2xl font-semibold text-cyan-900">{{title1}}</h4>
+                  <p class="text-gray-600">{{body1}}</p>
                 </div>
                 <a href="www.tailus.io" class="block w-max text-cyan-600">Read more</a>
               </div>
@@ -25,8 +25,8 @@
             <div class="sm:w-7/12 pl-0 p-5">
               <div class="space-y-2">
                 <div class="space-y-4">
-                  <h4 class="text-2xl font-semibold text-cyan-900">Provident de illo eveniet commodi fuga fugiat laboriosam expedita.</h4>
-                  <p class="text-gray-600">Laborum saepe laudantium in, voluptates ex placeat quo harum aliquam totam, doloribus eum impedit atque! Temporibus...</p>
+                  <h4 class="text-2xl font-semibold text-cyan-900">{{title2}}</h4>
+                  <p class="text-gray-600">{{body2}}</p>
                 </div>
                 <a href="www.tailus.io" class="block w-max text-cyan-600">Read more</a>
               </div>
@@ -36,4 +36,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name : 'tips',
+  props : {
+    title1 : String,
+    title2 : String,
+    body1 : String,
+    body2 : String,
+  }
+};
+</script>
 

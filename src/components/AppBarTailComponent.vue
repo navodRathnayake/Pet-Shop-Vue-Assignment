@@ -1,14 +1,26 @@
 <script setup>
   import ThemeModeSwitch from './ThemeModeSwitchComponent.vue'
+
+  import {useDark, useToggle} from "@vueuse/core"
+  const isDark = useDark()
+  const toggleDark = useToggle(isDark)
 </script>
 
 <template>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        
+        <div v-if="!isDark" class="pr-5">
+          <font-awesome-icon :icon="['fas', 'sun']" />
+        </div>
+
+        <div v-if="isDark" class="pr-5">
+          <font-awesome-icon :icon="['fas', 'circle-half-stroke']" />
+        </div>
+       
         <ThemeModeSwitch />
-        
-        
         <div v-if="!authenticated">
           <font-awesome-icon :icon="['far', 'circle-user']" size = "lg"/>
+          
         </div>
 
         <div v-if="authenticated" class="flex">

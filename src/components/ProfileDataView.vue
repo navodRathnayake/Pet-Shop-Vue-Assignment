@@ -1,11 +1,22 @@
+<script>
+import Json from '../json/user.json'
+export default {
+  data() {
+    return {
+      JsonData : Json
+    };
+  },
+};
+</script>
+
 <template>
    <div class="bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
       <div class="card w-96 mx-auto bg-white  shadow-xl hover:shadow">
          <img class="w-32 mx-auto rounded-full -mt-20 border-8 border-white" src="https://avatars.githubusercontent.com/u/67946056?v=4" alt="">
-         <div class="text-center mt-2 text-3xl font-medium">Ajo Alex</div>
-         <div class="text-center mt-2 font-light text-sm">+11243253454</div>
-         <div class="text-center mt-2 font-light text-sm">XXXX-XXXX-XXXX-XXX23</div>
-         <div class="text-center font-normal text-lg">Top Buyer</div>
+         <div class="text-center mt-2 text-3xl font-medium">{{JsonData.user.name}}</div>
+         <div class="text-center mt-2 font-light text-sm">{{JsonData.user.tp}}</div>
+         <div class="text-center mt-2 font-light text-sm">{{JsonData.user.card}}</div>
+         <div class="text-center font-normal text-lg">Top {{JsonData.user.rank}}</div>
          <div class="px-6 text-center mt-2 font-light text-sm">
          </div>
          <hr class="mt-8">

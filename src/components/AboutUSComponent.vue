@@ -5,7 +5,7 @@
 
 <template>
   <AppBar/>
-    <div class="relative isolate overflow-hidden py-24 sm:py-32 bg-about-us " >
+    <div class="relative isolate overflow-hidden py-24 sm:py-32 bg-about-us dark:bg-about-us-dark" >
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-7xl lg:mx-0">
             <div class="group rounded-5xl max-h w-100 px-10 py-10 bg-yellow-500 font-bold text-white relative overflow-hidden">
@@ -17,7 +17,7 @@
           </div>
         </div>
         <br/>
-        <div class="bg-white py-20 sm:py20">
+        <div class="bg-white py-20 sm:py20 dark:bg-slate-300">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
               <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
                 <div class="mx-auto flex max-w-xs flex-col gap-y-4">
@@ -36,5 +36,4 @@
             </div>
           </div>
       </div>
-      <AppFooter />
 </template>

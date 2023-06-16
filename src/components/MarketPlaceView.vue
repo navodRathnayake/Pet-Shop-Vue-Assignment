@@ -35,7 +35,7 @@ export default {
 
 <template>
     
-<div class="bg-white">
+<div class="bg-white dark:bg-gray-200">
     <div>
       <!--
         Mobile filter dialog

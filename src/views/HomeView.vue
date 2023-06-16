@@ -7,7 +7,4 @@
 
 <template>
   <HomeComponent />
-  <!-- <AboutUs id="about" /> -->
-  <!-- <RescueBanner /> -->
-  <!-- <ContactUs /> -->
 </template>

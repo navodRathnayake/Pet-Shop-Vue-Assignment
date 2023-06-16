@@ -1,6 +1,5 @@
 <template>
   <div class="mt-20">
-    <AppBar />
     <CartContainer />
   </div>
 </template>

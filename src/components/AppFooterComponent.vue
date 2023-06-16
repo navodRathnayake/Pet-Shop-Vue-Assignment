@@ -1,8 +1,8 @@
 <template>
     <!--Footer container-->
-<footer class="bg-neutral-200 text-center text-white dark:bg-neutral-600 ">
+<footer class="bg-neutral-200 text-center text-white dark:bg-neutral-600 justify-center">
     <div class="container pt-9">
-      <div class="mb-9 flex justify-center">
+      <div class="mb-9 flex justify-center w-[100vw]">
         <a href="#!" class="mr-9 text-neutral-800 dark:text-neutral-200">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@
       <a
         class="text-neutral-800 dark:text-neutral-400"
         href="https://tailwind-elements.com/"
-        >Tailwind Elements</a
+        >Jack Pets</a
       >
     </div>
   </footer>

@@ -5,8 +5,8 @@ import AppFooter from '../components/AppFooterComponent.vue'
 
 <template>
   <AppBar />
-    <div class="bg-contact-us py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl  lg:px-8 group rounded-3xl max-h w-120 px-10 py-10 bg-gray-200">
+    <div class="bg-contact-us dark:bg-contact-us-dark py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl  lg:px-8 group rounded-3xl max-h w-[90vw] px-10 py-10 bg-gray-200">
           <div class="mx-auto max-w-2xl lg:mx-0 ">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Reach Us</h2>
             <p class="mt-2 text-lg leading-8 text-gray-600">We are always available for you.</p>
@@ -87,8 +87,8 @@ import AppFooter from '../components/AppFooterComponent.vue'
                     <article class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">
                       <address class="text-gray-600">
                         <p><strong>Our Pet Shop</strong></p>
-                        <p>1234 Main St.</p>
-                        <p>Anytown, USA 12345</p>
+                        <p>sample@abc.com</p>
+                        <p>+212-321-433-321</p>
                         <p><a href="tel:+1-555-555-1212" class="text-blue-500 hover:text-blue-700">+1 (555) 555-1212</a></p>
                         <p><a href="mailto:info@ourpetshop.com" class="text-blue-500 hover:text-blue-700">info@ourpetshop.com</a></p>
                       </address>
@@ -131,5 +131,4 @@ import AppFooter from '../components/AppFooterComponent.vue'
           </div>
         </div>
       </div>
-      <AppFooter />
 </template>

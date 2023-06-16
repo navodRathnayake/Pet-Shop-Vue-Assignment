@@ -4,8 +4,8 @@ import MarketPlaceView from '../components/MarketPlaceView.vue'
 </script>
 
 <template>
-  <div class="bg-white ">
-    <AppBar />
+  <div class="bg-white dark:bg-gray-900">
+    <!-- <AppBar /> -->
     <MarketPlaceView />
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
     <!-- component -->
 <section class="">
-    <div class="container mx-auto mt-10 flex max-w-3xl flex-wrap justify-center rounded-lg bg-white px-5 h-auto">
+    <div class="container mx-auto mt-10 flex max-w-3xl flex-wrap justify-center rounded-lg  px-5 h-auto py-20 bg-slate-300 dark:bg-white">
       <!-- QR Code Number Account & Uploadfile -->
       <div class="flex-wrap md:flex">
         <div class="mx-auto">

@@ -1,8 +1,9 @@
 <template>
     <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in lg:mr-3">
-        <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
-        <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+        <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer " v-on:click="toggleDark()"/>
+        <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-700 cursor-pointer"></label>
     </div>
+
 </template>
 
 <style>
@@ -16,3 +17,9 @@
   background-color: #68D391;
 }
 </style>
+
+<script setup>
+import {useDark, useToggle} from "@vueuse/core"
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+</script>
