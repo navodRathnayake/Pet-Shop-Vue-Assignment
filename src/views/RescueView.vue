@@ -23,7 +23,7 @@
 
     <div class="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78">
       <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-500">
-        <img alt="..." src="https://media.istockphoto.com/illustrations/pug-and-bone-illustration-id164444988?k=6&m=164444988&s=612x612&w=0&h=kNTMDKBypXDjTA7VgbqtJAHHqpv3G3e1hWQdPFaw7QI=" class="w-full align-middle rounded-t-lg">
+        <img alt="..." src="https://th.bing.com/th/id/OIP.LjwW1RaIEpA5SaaTtem36gHaI5?pid=ImgDet&rs=1" class="w-full align-middle rounded-t-lg">
         <blockquote class="relative p-8 mb-4">
           <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="absolute left-0 w-full block h-95-px -top-94-px">
             <polygon points="-30,95 583,95 583,65" class="text-pink-500 fill-current"></polygon>

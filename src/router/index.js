@@ -8,6 +8,7 @@ import Cart from '../views/CartViewPage.vue'
 import About from '../components/AboutUSComponent.vue'
 import Contact from '../components/ContactUSComponent.vue'
 import Rescue from '../views/RescueView.vue'
+import Voucher from '../views/VoucherView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,6 +57,11 @@ const router = createRouter({
       path: '/rescue',
       name: 'rescue',
       component: Rescue
+    },
+    {
+      path: '/voucher',
+      name: 'voucher',
+      component: Voucher
     },
   ]
 })

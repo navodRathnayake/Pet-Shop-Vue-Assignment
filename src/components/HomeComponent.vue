@@ -4,6 +4,7 @@ import AppBar from './AppBar.vue'
 import HeroComponent from './HeroComponent.vue'
 import AppFooter from '../components/AppFooterComponent.vue'
 
+
 const mobileMenuOpen = ref(false)
 </script>
 
@@ -12,6 +13,6 @@ const mobileMenuOpen = ref(false)
       <AppBar />
       <HeroComponent id="#a" />
       <AppFooter />
-
     </div>
   </template>
+

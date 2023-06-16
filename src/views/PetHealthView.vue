@@ -15,12 +15,21 @@
           </div>
           <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              <HealthTipCard />
-              <HealthTipCard />
-              <HealthTipCard />
-              <HealthTipCard />
-              <HealthTipCard />
-              <HealthTipCard />
+              
+              <div v-for="index in [1,2,3,4]">
+                <div class="flex flex-col p-8 bg-gray-800 shadow-md hover:shodow-lg rounded-2xl">
+                  <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                          <div class="flex flex-col ml-3">
+                              <div class="font-medium leading-none text-gray-100">{{ myJson.articles[index].title }}</div>
+                              <p class="text-sm text-gray-500 leading-none mt-1">{{ myJson.articles[index].description }}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              </div>
+
             </dl>
           </div>
         </div>
@@ -29,3 +38,36 @@
       <AppFooter />
     </div>
 </template>
+
+<script>
+import axios from "axios";
+
+export default {
+  name: "GetBitCoin",
+  components: {},
+  data() {
+    return {
+      myJson : [],
+    };
+  },
+  beforeMount() {
+    this.getCoin();
+  },
+  methods: {
+    getCoin() {
+      axios
+        .get("https://newsapi.org/v2/everything?q=pet%20health&sortBy=popularity&apiKey=4d4223aa1e96473cbd20a3f1deec4dae")
+        .then((response) => {
+          this.myJson = response.data;
+          console.log(myJson);
+        })
+        .catch((error) => {
+          console.log(error);
+          this.errored = true;
+        })
+        .finally(() => (this.loading = false));
+
+    },
+  },
+};
+</script>

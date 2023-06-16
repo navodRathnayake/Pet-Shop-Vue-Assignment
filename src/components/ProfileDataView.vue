@@ -1,37 +1,25 @@
 <template>
-      <!-- component -->
-<div class="flex h-screen">
-  <div>
-     <div>
-        <div class="mt-5 rounded-lg shadow">
-           <div class="flex">
-              <div class="flex-1 py-5 pl-5 overflow-hidden">
-              </div>
-           </div>
-           <div class="px-5 pb-5">
-              <input  placeholder="Name" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
-              <input  placeholder="d" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
-              <input  placeholder="Address" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"> 
-              <div class="flex">
-                 <div class="flex-grow w-1/4 pr-2">
-                  <input  placeholder="PLZ" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
-                </div>
-                 <div class="flex-grow">
-                  <input placeholder="City" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
-                </div>
-              </div>
-           </div>
-           <hr class="mt-2">
-           <div class="flex flex-row-reverse p-3">
-              <div class="">
-                 <button type="button" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize bg-blue-700 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
-                   
-                    <span class="pl-2 mx-1">Upgrade User Data</span>
-                 </button>
-              </div>
-           </div>
-        </div>
-     </div>
-  </div>
-</div>
+   <div class="bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
+      <div class="card w-96 mx-auto bg-white  shadow-xl hover:shadow">
+         <img class="w-32 mx-auto rounded-full -mt-20 border-8 border-white" src="https://avatars.githubusercontent.com/u/67946056?v=4" alt="">
+         <div class="text-center mt-2 text-3xl font-medium">Ajo Alex</div>
+         <div class="text-center mt-2 font-light text-sm">+11243253454</div>
+         <div class="text-center mt-2 font-light text-sm">XXXX-XXXX-XXXX-XXX23</div>
+         <div class="text-center font-normal text-lg">Top Buyer</div>
+         <div class="px-6 text-center mt-2 font-light text-sm">
+         </div>
+         <hr class="mt-8">
+         <div class="flex p-4">
+         <div class="w-1/2 text-center">
+             <a href="#">Log Out</a>
+         </div>
+         <div class="w-0 border border-gray-300">
+            
+         </div>
+         <div class="w-1/2 text-center">
+            <a href="#">Update Profile</a>
+         </div>
+         </div>
+      </div>
+   </div>
 </template>

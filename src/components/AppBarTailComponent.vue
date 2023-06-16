@@ -26,12 +26,15 @@
             <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
           </div>
         </div>
+
         <div v-if="!authenticated">
           <a href="/login" class="text-sm font-semibold leading-6 text-gray-900 ml-3">Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
+
         <div v-if="authenticated">
           <button @click="logout" class="text-sm font-semibold leading-6 text-gray-900 ml-3">Log Out <span aria-hidden="true">&rarr;</span></button>
         </div>
+        
         <!-- <RouterLink>Log in </RouterLink> -->
       </div>
       <!-- cart slide over -->

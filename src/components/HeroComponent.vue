@@ -8,14 +8,31 @@
                     DailyBot takes chat and collaboration to the next level: daily standups, team check-ins, surveys, kudos, best companion bot for your virtual watercooler, 1:1 intros, motivation tracking and more.
                 </p>
                 <div class="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
-                     
-                    <a aria-label="add to chat" href="#" class=" bg-red-500 p-4 border bg-red border-red-200 dark:bg-gray-800  dark:border-red-700 rounded-full duration-300 hover:border-red-400 hover:shadow-lg hover:shadow-red-600/20 dark:hover:border-red fill-red-600">
-                        <div class="flex justify-center space-x-4 ">
-                            <span class=" font-medium text-white">Subscribe Now</span>
+                    <!-- <button @click="() => TogglePopup('buttonTrigger')">Open Popup</button> -->
+                    <a aria-label="add to chat" href="/voucher" class=" bg-red-500 p-4 border bg-red border-red-200 dark:bg-gray-800  dark:border-red-700 rounded-full duration-300 hover:border-red-400 hover:shadow-lg hover:shadow-red-600/20 dark:hover:border-red fill-red-600">
+                        <div v-if="!authenticated">
+                            <div class="flex justify-center space-x-4 ">
+                                <span class=" font-medium text-white">Subscribe Now</span>
+                            </div>
+                        </div>
+                        <div v-if="authenticated">
+                            <div class="flex justify-center space-x-4 ">
+                                <span class=" font-medium text-white">View Subscription</span>
+                            </div>
                         </div>
                     </a>   
                      
                 </div>
+
+                <!-- <Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => TogglePopup('buttonTrigger')">
+			        <h2>My Button Popup</h2>
+		        </Popup>
+		        <Popup v-if="popupTriggers.timedTrigger" :TogglePopup="() => TogglePopup('timedTrigger')">
+			        <h2>My Timed Popup</h2>
+			        <p>
+				        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, accusantium sequi. Libero velit assumenda odio dolor repellendus earum debitis culpa voluptatum, illum beatae? Quasi, modi omnis repellat adipisci voluptate assumenda!
+			        </p>
+		        </Popup> -->
 
                 <div class="dark:text-gray-300">
                 </div>
@@ -36,3 +53,78 @@
     </div>
     </div>
 </template>
+
+<script>
+import { ref } from 'vue';
+/* eslint-disable no-unused-vars */
+import { getAuth, onAuthStateChanged,signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { useRouter } from "vue-router";
+import CartSliderView from '../components/CartView.vue'
+import ProfileView from '../components/ProfileView.vue';
+import Json from '../json/marketplace.json'
+import Popup from '../components/Popup.vue'
+
+export default {
+    name: "LoginBox",
+    setup () {
+		const popupTriggers = ref({
+			buttonTrigger: false,
+			timedTrigger: false
+		});
+
+		const TogglePopup = (trigger) => {
+			popupTriggers.value[trigger] = !popupTriggers.value[trigger]
+		}
+
+		setTimeout(() => {
+			popupTriggers.value.timedTrigger = true;
+		}, 3000);
+
+		return {
+			Popup,
+			popupTriggers,
+			TogglePopup
+		}
+	},
+    data() {
+        return {
+            loggedIn: false,
+            email: "",
+            password: "",
+            router: useRouter(),
+            errMsg: "",
+            auth: getAuth(),
+            JsonData : Json
+        };
+    },
+    mounted() {
+        const ref = this;
+        onAuthStateChanged(this.auth, (user) => {
+            if (user) {
+                ref.loggedIn = true;
+            }
+            else {
+                ref.loggedIn = false;
+            }
+        });
+    },
+    computed: {
+        authenticated() {
+            return this.loggedIn;
+        }
+    },
+    methods: {
+        logout() {
+            alert("You Have Loged Out");
+            signOut(this.auth).then(() => {
+                this.loggedIn = false;
+                this.email = "";
+                this.password = "";
+                this.router.push("/");
+            });
+        },
+    },
+};
+</script>
+
+
