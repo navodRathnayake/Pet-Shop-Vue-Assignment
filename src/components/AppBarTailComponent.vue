@@ -44,7 +44,7 @@
         </div>
 
         <div v-if="authenticated">
-          <button @click="logout" class="text-sm font-semibold leading-6 text-gray-900 ml-3">Log Out <span aria-hidden="true">&rarr;</span></button>
+          <button @click="logout" class="text-sm font-semibold leading-6 text-gray-900 ml-3">Log Out <span aria-hidden="true"></span></button>
         </div>
         
         <!-- <RouterLink>Log in </RouterLink> -->
